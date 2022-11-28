@@ -1,0 +1,250 @@
+@import url('default.css');
+@import url('common.css');
+
+.visual {
+    width: 100%;
+    height: 926px;
+    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
+}
+.visual h2 {
+    font-size: 0;
+    line-height: 0;
+}
+
+.intro {
+    padding: 205px 0 184px 0;
+    border-bottom: 1px solid #ddd;
+    color: #7E9ED6;
+}
+.intro .left {
+    float: left;
+    margin-right: 200px;
+}
+.intro .left h2 {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.intro .left span {
+    display: block;
+    margin: 20px 0 40px 0;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'BMJUA';
+}
+.intro .left p {
+    width: 600px;
+    line-height: 30px;
+}
+.intro .right {
+    padding: 77px 80px 0 0;
+}
+.intro .right ul li {
+    display: flex;
+    margin-bottom: 40px;
+}
+.intro .right ul li h3 {
+    font-size: 20px;
+    font-family: 'PyeongChangPeace-Light';
+}
+.intro .right ul li.pro h3 {
+    margin-right: 56px;
+}
+.intro .right ul li.edu h3 {
+    margin-right: 20px;
+}
+.intro .right ul li.con h3 {
+    margin-right: 40px;
+}
+.intro .port {
+    position: relative;
+    margin-top: 195px;
+    text-align: center;
+}
+.intro .port::after {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    content: "";
+}
+
+.yang {
+    padding: 168px 0 220px 0;
+    border-bottom: 1px solid #ddd;
+    color: #7E9ED6;
+}
+.yang .pic {
+    float: right;
+    padding: 37px 68px 0 0;
+}
+.yang h2 {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.yang .over {
+    margin: 64px 0 57px 0;
+}
+.yang .over h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.yang .over p {
+    width: 440px;
+    line-height: 1.2;
+}
+.yang .about h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.yang .about ul li {
+    display: flex;
+    width: 320px;
+    margin-bottom: 12px;
+}
+.yang .about ul li h4 {
+    width: 105px;
+    margin: 0 61px 0 0;
+}
+.yang .font {
+    margin-top: 45px;
+}
+.yang .font h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+.care {
+    padding: 168px 0 220px 0;
+    border-bottom: 1px solid #ddd;
+    color: #7E9ED6;
+}
+.care .pic {
+    float: right;
+    padding: 37px 68px 0 0;
+}
+.care h2 {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.care .over {
+    margin: 64px 0 57px 0;
+}
+.care .over h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.care .over p {
+    width: 440px;
+    line-height: 1.2;
+}
+.care .about h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.care .about ul li {
+    display: flex;
+    width: 320px;
+    margin-bottom: 12px;
+}
+.care .about ul li h4 {
+    width: 105px;
+    margin: 0 61px 0 0;
+}
+.care .font {
+    margin-top: 45px;
+}
+.care .font h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+.cafe {
+    padding: 168px 0 220px 0;
+    border-bottom: 1px solid #ddd;
+    color: #7E9ED6;
+}
+.cafe .pic {
+    float: right;
+    padding: 37px 68px 0 0;
+}
+.cafe h2 {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.cafe .over {
+    margin: 64px 0 57px 0;
+}
+.cafe .over h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.cafe .over p {
+    width: 440px;
+    line-height: 1.2;
+}
+.cafe .about h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.cafe .about ul li {
+    display: flex;
+    width: 320px;
+    margin-bottom: 12px;
+}
+.cafe .about ul li h4 {
+    width: 105px;
+    margin: 0 61px 0 0;
+}
+.cafe .font {
+    margin-top: 45px;
+}
+.cafe .font h3 {
+    margin-bottom: 19px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+.footer {
+    padding: 260px 0;
+    background-color: #03438D;
+    color: #fff;
+    text-align: center;
+}
+.footer h2 {
+    padding: 120px 204px;
+    display: inline-block   ;
+    font-size: 80px;
+    font-weight: 700;
+    font-family: 'PyeongChangPeace-Bold';
+    border: 1px solid #E1C362;
+}
+.footer h2 strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'PyeongChangPeace-Light';
+}
