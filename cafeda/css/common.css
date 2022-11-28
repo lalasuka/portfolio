@@ -1,0 +1,316 @@
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+html, body {
+    color: #3D3D3D;
+    line-height: 1.4;
+    font-family: 'Noto Sans kr', 'nanumGothic', 'Malgun Gothic', 'Apple SD Gothic','Apple SD Gothic Neo', 'Dotum', sans-serif;
+    /* 폰트 적용 우선순위
+       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
+       apple sd gothic - 아이폰에서 지원하는 폰트 */
+    font-size: 16px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    position: relative;
+    min-width: 1440px;
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형
+        1400px 일때에도 좌우에 여백은 유지해야함 
+        (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는 점)
+        부드럽게 여백을 유지하면서 전환
+        원래 좌우에 여백 20px씩 들어가 있는 걸로 스타일을 줌
+        1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+        padding으로 좌우에 여백을 20px씩 줌 */
+}
+@media screen and (max-width:1400px){
+    html, body {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:1000px){
+    html, body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:640px){
+    /* 640px 이하의 디바이스에서만 아래 css가 적용
+      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
+      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+      구현방식이 달라서 고정값을 모두 삭제 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap { /* id="wrap" */
+        min-width: 320px;
+    }
+    .wrapper {
+        width: auto;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+    position: relative;
+}
+
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000000000000;
+    width: 100%;
+}
+.skip_nav a {
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #0059A8;
+    color: #FFF;
+    text-align: center;
+}
+.skip_nav a:focus {
+    top: 0;
+}
+
+/* 브라우저에서 글자를 드래그했을때 드래그한 영역의 색과 글자색
+    -moz-, -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성 */
+::selection{background:#e27e1490;color:#fff;}
+::-moz-selection{background:#e27e1490;color:#fff;}
+::-webkit-selection{background:#e27e1490;color:#fff;} 
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+}
+.header .logo {
+    float: left;
+    margin: 32px 0 0 92px;
+}
+.header .logo a {
+    display: block;
+    width: 98px;
+    height: 40px;
+    background-image: url(../images/common/logo_w.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-size: 0;
+    line-height: 0;
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb .gnb_wrap {
+    float: left;
+}
+.header .gnb ul li {
+    float: left;
+}
+.header .gnb ul li a {
+    display: block;
+    padding: 0 25px;
+    font-size: 25px;
+    line-height: 100px;
+}
+.header .tnb {
+    float: left;
+    margin-right: 67px;
+}
+.header .tnb button {
+    padding: 0 25px;
+    height: 100px;
+}
+.header .tnb button i {
+    font-size: 30px;
+}
+
+/* fixed */
+.header.fixed {
+    position: fixed;
+    background-color: rgba(255,255,255,0.7);
+    color: #1d1d1d;
+}
+.header.fixed .logo a {
+    background-image: url(../images/common/logo_b.svg);
+    width: 98px;
+}
+
+@media screen and (max-width:640px){
+    .header {
+        height: 70px;
+    }
+    .header .logo {
+        margin: 20px 0 0 20px;
+    }
+    .header .logo a {
+        width: 67px;
+        height: 27px;
+    }
+    .header .gnb {
+        float: right;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        padding: 31px 20px 21px 20px;
+        font-size: 0;
+        line-height: 0;
+    }
+    .header .gnb .gnb_open span {
+        display: block;
+        height: 2px;
+        margin-bottom: 4px;
+        background-color: #FFF  ;
+        border-radius: 1px;
+    }
+    .header .gnb .gnb_open span.line1 {
+        width: 15px;
+    }
+    .header .gnb .gnb_open span.line2 {
+        width: 10px;
+        margin-left: 5px;
+    }
+    .header .gnb .gnb_open span.line1 {
+        width: 15px;
+    }
+    .header .gnb ul {
+        display: none;
+    }
+    .header .tnb {
+        display: none;
+    }
+
+    /* fixed */
+    .header.fixed .logo a {
+        width: 67px;
+    }
+    .header.fixed .gnb .gnb_open span {
+        background-color: #1d1d1d;
+    }
+}
+
+.footer {
+    position: relative;
+    color: rgba(61, 61, 61, 0.6);
+}
+.footer .ftop {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.footer .ftop ul {
+    width: 1440px;
+    padding: 84px 20px 26px 20px;
+    margin: 0 auto;
+}
+.footer .ftop ul li {
+    float: left;
+    margin-right: 38px;
+}
+.footer .inner {
+    padding-top: 25px;
+}
+.footer .flogo {
+    float: left;
+}
+.footer .sns {
+    float: right;
+}
+.footer .sns ul li {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+.footer .sns ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(102, 102, 102, 0.6);
+    border-radius: 15px;
+    padding-top: 4px;
+}
+.footer .sns ul li:last-child {
+    margin-right: 0;
+}
+.footer .sns ul li a img {
+    width: 20px;
+    opacity: 0.4;
+}
+.footer .finfo {
+    color: rgba(61, 61, 61, 0.6);
+}
+.footer .finfo ul {
+    display: inline-block;
+    width: 565px;
+    padding: 19px 0 0 31px;
+}
+.footer .finfo ul li {
+    float: left;
+    margin-right: 37px;
+    line-height: 2.5;
+}
+.footer .copylight {
+    padding: 20px 0 73px 206px;
+}
+@media screen and (max-width:640px){
+    .footer::after {
+        top: 75px;
+    }
+    .footer .ftop ul {
+        padding: 50px 20px 32px 20px;
+    }
+    .footer .ftop ul li {
+        margin-right: 18px;
+    }
+    .footer .flogo img {
+        width: 72px;
+    }
+    .footer .sns ul li {
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        border-radius: 15px;
+    }
+    .footer .sns ul li:last-child {
+        margin-right: 0;
+    }
+    .footer .sns ul li a img {
+        width: 18px;
+    }
+    .footer .finfo {
+        color: rgba(61, 61, 61, 0.6);
+    }
+    .footer .finfo ul {
+        width: 565px;
+        padding: 22px 0 0 0;
+    }
+    .footer .finfo ul li {
+        float: none;
+        margin-right: 0;
+        line-height: 2.6;
+    }
+    .footer .copylight {
+        padding: 20px 0 28px 0px;
+    }
+}
